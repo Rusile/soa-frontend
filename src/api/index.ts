@@ -25,17 +25,18 @@ export type TGetProductsResponse = {
 }
 
 const products = async (params: TGetProductsParams, filters: TGetProductsFilter[]) => {
-  const res = await client.get<TGetProductsResponse>('/products', {
-    params: {
-      page: params.page,
-      size: params.size,
-      sortBy: params.sortBy,
-      filters: JSON.stringify(filters),
-    },
-    paramsSerializer: {
-      indexes: null,
-    },
-  })
+  const res = await client.postForm<TGetProductsResponse>('/products/bulk',
+    JSON.stringify(filters),
+    {
+      params: {
+        page: params.page,
+        size: params.size,
+        sortBy: params.sortBy,
+      },
+      paramsSerializer: {
+        indexes: null,
+      },
+    })
   return res.data
 }
 

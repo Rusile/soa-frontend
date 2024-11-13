@@ -215,7 +215,6 @@ const FormModal: FC<TFormModalProps> = (props) => {
               </FormControl>
 
               <FormControl
-                isRequired
                 mb={4}
               >
                 <FormLabel>Owner Name</FormLabel>
@@ -230,7 +229,6 @@ const FormModal: FC<TFormModalProps> = (props) => {
               </FormControl>
 
               <FormControl
-                isRequired
                 mb={4}
               >
                 <FormLabel>Owner Weight</FormLabel>
@@ -247,7 +245,6 @@ const FormModal: FC<TFormModalProps> = (props) => {
               </FormControl>
 
               <FormControl
-                isRequired
                 mb={4}
               >
                 <FormLabel>Eye Color</FormLabel>
@@ -271,7 +268,6 @@ const FormModal: FC<TFormModalProps> = (props) => {
               </FormControl>
 
               <FormControl
-                isRequired
                 mb={4}
               >
                 <FormLabel>Hair Color</FormLabel>
